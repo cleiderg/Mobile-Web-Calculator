@@ -4,6 +4,7 @@
 
 
 $(document).ready(function(){
+    $(document).delegate(".ui-content", "touchmove", false);
 
 
     $(document).on('touchstart','.col-sm-3, .col-sm-6', function(){
