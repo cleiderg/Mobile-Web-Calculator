@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
-    <meta name="viewport" content="user-scalable=no">
+    <meta name="viewport" content=" user-scalable=no">
+
 
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="jquery-3.2.1%20.js"></script>
@@ -29,6 +30,7 @@
         .screen{
 
             height: 600px;
+            overflow: scroll;
 
 
         }
@@ -36,7 +38,7 @@
         #display{
             font-size: 300px;
             font-weight: 100;
-            letter-spacing: -30px;
+            letter-spacing: -20px;
             text-align: right;
             padding-right: 2%;
             color:white;
@@ -89,7 +91,47 @@
             padding-left: 9.5%;
 
         }
-        p{color:white;}
+
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+
+            #display{
+                font-size: 70px;
+
+                letter-spacing: -3px;
+                position: fixed;
+            }
+            .screen{
+                padding-top: 70px;
+            }
+
+
+
+            .container {
+                padding: 250px;
+
+
+            }
+            .col-sm-3{
+                font-size: 50px;
+                width: 100px;
+
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .col-sm-6{
+
+                font-size: 50px;
+                width: 202px;
+                height: 91px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+        }
+
+
+
 
     </style>
 
@@ -99,11 +141,11 @@
 
     <div class="container">
         <div class="screen">
-            <h1 id="display">0123456789</h1>
+            <h1 id="display">0</h1>
         </div>
         <div class="buttons">
             <div class="row">
-                <div class="col-sm-3 unNum">
+                <div class="col-sm-3 unNum clear">
                     A/C
                 </div>
                 <div class="col-sm-3 unNum">
@@ -166,7 +208,7 @@
                 <div class="col-sm-3">
                     ∙
                 </div>
-                <div class="col-sm-3 operator">
+                <div class="col-sm-3 operator equals">
                     =
                 </div>
             </div>
